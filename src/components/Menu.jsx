@@ -30,6 +30,12 @@ const Menu=()=>{
     gsap.fromTo('.details p',{ypercent:100,opacity:0},{
       ypercent:0,opacity:100,ease:'power1.inout'
     })
+    gsap.fromTo('#s-left-leaf',{ypercent:100,opacity:0},{
+      ypercent:0,opacity:100,ease:'power1.inout'
+    })
+    gsap.fromTo('#s-right-leaf',{ypercent:100,opacity:0},{
+      ypercent:0,opacity:100,ease:'power1.inout'
+    })
   },[currentIndex]);
   const contentRef=useRef();
   return(
@@ -76,8 +82,10 @@ const Menu=()=>{
           <div className="details">
             <h2>{currentCocktail.title}</h2>
             <p>{currentCocktail.description}</p>
-          </div>
-        </div>
+                </div>
+      </div>
+
+
       </div>
     </section>
   )
